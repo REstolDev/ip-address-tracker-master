@@ -2,10 +2,137 @@
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
+    border:none;
+    background-color: transparent;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 :root{
     --primary-color: hsl(0, 0%, 17%);
     --secondary-color: hsl(0, 0%, 59%);
 }
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    height:100dvh;
+    color:var(--primary-color);
+}
+.container{
+    height:100dvh;
+}
+header{
+    background-image: url('images/pattern-bg-mobile.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding:1.25rem;
+    position: relative;
+    height: 16.25rem;
+}
+
+h1{
+    color:white;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom:1.25rem;
+
+}
+
+.inputDiv{
+    background-color: white;
+    border-radius:  0.5rem;
+    min-width:20rem;
+    max-width:25rem;
+    margin:0 auto;
+    height:3rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:1.25rem;
+
+}
+.inputIP{
+    color:var(--secondary-color);
+    width:80%;
+    height:3rem;
+    border-radius:  0.5rem 0 0 0.5rem;
+}
+input:focus{
+    outline: none;
+    color:var(--primary-color);
+}
+
+.dataContent{
+    background-color: white;
+    border-radius: 0.5rem;
+    width:92.5%;
+    margin:0 auto;
+    max-width:25rem;
+    min-width:20rem;
+    text-align: center;
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    padding:1rem;
+    bottom:0;
+    left:50%;
+    transform:translateY(50%)translateX(-50%);
+    position: absolute;
+    z-index:1;
+}
+h2{
+    color:var(--secondary-color);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+button{
+    border-radius: 0 0.5rem 0.5rem 0;
+    height:3rem;
+    width:3rem;
+    background-color: var(--primary-color);
+}
+button:hover{
+    background-color: var(--secondary-color);
+
+}
+p{
+    font-weight: 500;
+    font-size: 1.125rem;
+    margin-top:0.5rem;
+
+}
+#map { 
+    height:calc(100dvh - 16.25rem);
+            z-index:0;
+ }
+@media  screen and (min-width: 675px) {
+    header{
+        background-image: url('images/pattern-bg-desktop.png');
+        height: 12rem;
+    }
+    .inputDiv{
+        max-width:40rem;
+    }
+    .dataContent{
+        max-width:40rem;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        text-align: left;
+        padding: 1.5rem;
+       
+    }
+    .data{
+        border-right:1px var(--secondary-color) solid;
+        padding-right:1rem;
+    }
+    .borderNone{
+        border:none;
+    }
+    #map { 
+    height:calc(100dvh - 12rem);
+    }
+}
+
