@@ -38,6 +38,7 @@
     <div class="container">
       <header class="header">
         <h1>IP Address Tracker</h1>
+        <form id="searchForm">
         <div class="inputDiv">
           <label for="IP"></label>
           <input
@@ -51,10 +52,12 @@
             id="getLocationBtn"
             aria-label="Click here to track IP"
             title="button"
+            form="searchForm"
           >
             <img src="images/icon-arrow.svg" alt="" />
           </button>
         </div>
+      </form>
         <div class="dataContent">
           <div class="data">
             <h2>IP Address</h2>
@@ -78,5 +81,6 @@
         <div class="map" id="map"></div>
       </main>
     </div>
+    
   </body>
 </html>
